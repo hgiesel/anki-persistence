@@ -31,9 +31,9 @@ def setup_script():
             tag = f"{script_name}_tag",
 
             getter = lambda id, storage: ami.make_script(
+                script_name,
                 storage.enabled if storage.enabled is not None else True,
                 'js',
-                script_name,
                 version,
                 description,
                 'body',
@@ -43,7 +43,7 @@ def setup_script():
 
             setter = lambda id, script: True,
             store = ['enabled', 'conditions', 'position'],
-            readonly = ['name', 'type', 'version', 'code', 'position', 'description'],
+            readonly = ['name', 'type', 'version', 'description', 'code'],
             reset = False,
             deletable = False,
         )
