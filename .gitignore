@@ -1,2 +1,6 @@
 node_modules/*
 package-lock.json
+
+build/*
+asset_manager/web/script.js
+.DS_Store
