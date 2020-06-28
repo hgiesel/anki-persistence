@@ -36,7 +36,7 @@ def setup_script():
                 'js',
                 version,
                 description,
-                'body',
+                storage.position if storage.position is not None else 'into_template',
                 storage.conditions if storage.conditions is not None else [],
                 script,
             ),
